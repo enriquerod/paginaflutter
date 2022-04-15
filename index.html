@@ -195,6 +195,24 @@
     onendload="document.getElementById('load').remove();"></script>
 
 
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      var toro =  document.getElementById("toro");
+      var load =  document.getElementById("load");
+
+      if (toro) {
+        toro.remove();
+      }
+
+      if (load) {
+        load.remove();
+      }
+
+    }, 10000);
+};
+</script>
+
 <!-- <script>
   window.onload = function () {
     setTimeout(function () {
