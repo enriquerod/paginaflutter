@@ -52469,7 +52469,7 @@ j=A.bF(h,20,h)
 i=b.D(f).f.a.a<800?B.a8:B.pU
 if(b.D(f).f.a.a>1399)f=A.hb(b)?new A.aw(150,0,150,0):new A.aw(300,0,300,0)
 else f=b.D(f).f.a.a<800?new A.aw(0,0,0,0):new A.aw(150,0,150,0)
-return A.b9(h,A.b9(h,A.cS(A.b([o,p,r,q,m,l,k,j,A.dx(A.b([new A.cT(f,new A.kJ(4," el dinero para fortalecer tu negocio","Recibe",B.q1,h),h)],n),B.u,i,B.O)],n),B.u,B.R),B.k,h,h,h,h,h,h,new A.aw(0,40,0,0),h,h,h),B.k,h,h,h,h,s,h,new A.aw(5,0,5,0),h,h,h)}}
+return A.b9(h,A.b9(h,A.cS(A.b([o,p,r,q,m,l,k,j,A.dx(A.b([new A.cT(f,new A.kJ(4," el dinero para fortalecer tu negocio","Recibe",B.q1,h),h)],n),B.u,i,B.O)],n),B.u,B.R),B.k,h,h,h,h,h,h,new A.aw(0,40,0,0),h,h,h),B.k,B.i,h,h,h,s,h,new A.aw(5,0,5,0),h,h,h)}}
 A.kB.prototype={
 an(){return new A.Fx(B.m)}}
 A.Fx.prototype={
