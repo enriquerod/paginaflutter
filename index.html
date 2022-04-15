@@ -194,8 +194,17 @@
     <script src="main.dart.js" type="application/javascript"
     onendload="document.getElementById('load').remove();"></script> -->
 
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      window.document.getElementById('toro')?.remove();
+    });
 
-<script>
+    window.addEventListener('flutter-first-frame', function () {
+      window.document.getElementById('load')?.remove();
+    });
+  </script>
+
+<!-- <script>
   window.onload = function () {
     setTimeout(function () {
       var toro =  document.getElementById("toro");
@@ -211,7 +220,7 @@
 
     }, 4000);
 };
-</script>
+</script> -->
 
 <!-- <script>
   window.onload = function () {
