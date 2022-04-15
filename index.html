@@ -14,8 +14,6 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <link rel="stylesheet" href="loader.css">
-
   <base href="/">
 
   <meta charset="UTF-8">
@@ -45,8 +43,13 @@
       justify-content: center; /* Main Axis */
       align-items: center; /* Cross Axis */
     }
-    .toroindicator{
-      width: 50vw;
+    .center {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
     }
   </style>
 
@@ -67,13 +70,13 @@
     }
   
     .loader {
-      border: 16px solid #ffffff;
+      border: 16px solid #f3f3f3;
       border-radius: 50%;
       border: 15px solid;
-      border-top: 16px solid #ffffff;
-      border-right: 16px solid #311191;
-      border-bottom: 16px solid #ffffff;
-      border-left: 16px solid #311191;
+      border-top: 16px solid #FFFFFF;
+      border-right: 16px solid #2c3ab6;
+      border-bottom: 16px solid #FFFFFF;
+      border-left: 16px solid #2c3ab6;
       width: 120px;
       height: 120px;
       -webkit-animation: spin 2s linear infinite;
@@ -100,15 +103,16 @@
   </style>
 
 
+
 </head>
-<body style="overflow: hidden">
+<body>
 
 
   <div id="toro" class="container">
     <img class="center" src="ToroDorado.png" />
   </div>
 
-  <div id="circulo" class="loading">
+  <div id="load" class="loading">
     <div class="loader"></div>
   </div>
 
@@ -117,7 +121,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '3796944115';
+    var serviceWorkerVersion = '2658845018';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -184,30 +188,35 @@
 
 
 
-  <!-- We'll tell flutter to remove the loader when it has finished loading -->
+<script src="main.dart.js" type="application/javascript"
+    onendload="document.getElementById('toro').remove();"></script>
+
+    <script src="main.dart.js" type="application/javascript"
+    onendload="document.getElementById('load').remove();"></script>
 
 
-  <script>
-    window.onload = function () {
-      setTimeout(function () {
-        var loadingIndicator =  document.getElementById("toro");
-        if (loadingIndicator) {
-          loadingIndicator.remove();
-        }
-      }, 10000);
-  };
-  </script>
-
-<script>
+<!-- <script>
   window.onload = function () {
     setTimeout(function () {
-      var loadingIndicator =  document.getElementById("circulo");
+      var loadingIndicator =  document.getElementById("toro");
       if (loadingIndicator) {
         loadingIndicator.remove();
       }
     }, 10000);
 };
 </script>
+
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      var loadingIndicator =  document.getElementById("load");
+      if (loadingIndicator) {
+        loadingIndicator.remove();
+      }
+    }, 10000);
+};
+</script> -->
+
 
 </body>
 </html>
