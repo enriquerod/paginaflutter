@@ -33,11 +33,30 @@
 
   <title>vip_capital</title>
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff">
-</head>
-<body>
 
-  <img src="ToroDorado.png" class="center" />
+
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }
+    .toroindicator{
+      width: 50vw;
+    }
+  </style>
+
+</head>
+<body style="overflow: hidden">
+
+
+  <div id="toro" class="container">
+    <img class="toroindicator" src="ToroDorado.png" />
+  </div>
 
   <div id="loader">
     <div class="lds-dual-ring"></div>
@@ -115,6 +134,18 @@
 
   <script src="main.dart.js" type="application/javascript"
     onendload="document.getElementById('loader').remove();"></script>
+
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        var loadingIndicator =  document.getElementById("toro");
+        if (loadingIndicator) {
+          loadingIndicator.remove();
+        }
+      }, 10000);
+  };
+  </script>
+
 
 </body>
 </html>
