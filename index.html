@@ -14,13 +14,11 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <link rel="stylesheet" href="loader.css">
-
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="VIP Capital">
+  <meta name="description" content="A new Flutter project.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,41 +31,13 @@
 
   <title>vip_capital</title>
   <link rel="manifest" href="manifest.json">
-
-
-  <meta name="theme-color" content="#ffffff">
-
-  <style>
-    .container {
-      width: 100vw;
-      height: 100vh;
-      display: flex; /* Default Axis is X*/
-      justify-content: center; /* Main Axis */
-      align-items: center; /* Cross Axis */
-    }
-    .toroindicator{
-      width: 50vw;
-    }
-  </style>
-
 </head>
-<body style="overflow: hidden">
-
-
-  <div id="toro" class="container">
-    <img class="toroindicator" src="ToroDorado.png" />
-  </div>
-
-  <div id="loader">
-    <div class="lds-dual-ring"></div>
-  </div>
-
-
+<body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '3796944115';
+    var serviceWorkerVersion = '4018594451';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -130,22 +100,5 @@
       loadMainDartJs();
     }
   </script>
-  <!-- We'll tell flutter to remove the loader when it has finished loading -->
-
-  <script src="main.dart.js" type="application/javascript"
-    onendload="document.getElementById('loader').remove();"></script>
-
-  <script>
-    window.onload = function () {
-      setTimeout(function () {
-        var loadingIndicator =  document.getElementById("toro");
-        if (loadingIndicator) {
-          loadingIndicator.remove();
-        }
-      }, 10000);
-  };
-  </script>
-
-
 </body>
 </html>
