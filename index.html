@@ -14,11 +14,13 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
+  <link rel="stylesheet" href="loader.css">
+
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="VIP Capital">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,13 +33,39 @@
 
   <title>vip_capital</title>
   <link rel="manifest" href="manifest.json">
+
+
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }
+    .toroindicator{
+      width: 50vw;
+    }
+  </style>
+
 </head>
-<body>
+<body style="overflow: hidden">
+
+
+  <div id="toro" class="container">
+    <img class="center" src="ToroDorado.png" />
+  </div>
+
+
+
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '4018594451';
+    var serviceWorkerVersion = '3796944115';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -100,5 +128,24 @@
       loadMainDartJs();
     }
   </script>
+
+
+
+
+  <!-- We'll tell flutter to remove the loader when it has finished loading -->
+
+
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        var loadingIndicator =  document.getElementById("toro");
+        if (loadingIndicator) {
+          loadingIndicator.remove();
+        }
+      }, 10000);
+  };
+  </script>
+
+
 </body>
 </html>
